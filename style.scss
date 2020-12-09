@@ -1,0 +1,100 @@
+@import "variables.scss";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html { scroll-behavior: smooth; }
+body {
+    margin: 0; 
+    font-family: $font-body;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: $font-title;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    margin: 40px;
+    z-index: 9999;
+    background-color: black;
+    border-radius: 50%;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        rect {
+            fill: white;
+            transform-box: fill-box;
+        } 
+        .a {
+            transform: translate(10px, 11px);
+        }
+        .b {
+            transform: translate(10px, 18px);
+        }
+        .c {
+            transform: translate(10px, 25px);
+        }
+    }
+    
+}
+
+nav#nav {
+    position: fixed;
+    display: flex; justify-content: center; align-items: center;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    background-color:black;
+    color: white;
+    transition: right 500ms;
+
+    body.clicked & {right: 0;}
+
+    ul {
+        li {
+            padding: 20px;
+            list-style: none;
+        }
+    }
+}
+.blackDiv {
+    background-color: black;
+    color: white;
+    height: 50%;
+    max-width: 900px;
+    border-radius: 5px;
+    padding: 10px;
+
+    h2 {
+        font-size: 3em;
+        font-family: $font-title;
+    }
+}
+section {
+    height: 200vh;
+    width: 100%;
+    padding: 5px;
+}
+#promo1 {
+    
+}
+#promo1, #promo3 {
+    background-color: $color-pink-one;
+}
+
+#promo2, #promo4 {    
+}
